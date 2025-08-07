@@ -2,7 +2,7 @@
   "urls": [
     {
       "name": "Clissold Swim - Preschool Sat",
-      "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:true,%22centre%22:13,%22courseGroupCategory%22:%5B1%5D,%22courseType%22:1,%22levelGroup1%22:%5B%221:%7C%2Fswimbies%22%5D,%22level1:%7C%2Fswimbies%22:%5B%221:%7C%2Fswimbies%2Fpre-school-new%22%5D,%22dayOfWeek%22:%5B6%5D%7D",
+      "url": "https://betterflow.courseprogress.co.uk/onlinejoining/classes-results?filter=%7B%22showFullCourses%22:true,%22centre%22:13,%22courseGroupCategory%22:%5B1%5D,%22courseType%22:1,%22levelGroup1%22:%5B%221:%7C%2Fswimbies%22%5D,%22level1:%7C%2Fswimbies%22:%5B%221:%7C%2Fswimbies%2Fpre-school-new%22%5D,%22dayOfWeek%22:%5B0,6%5D%7D",
       "watch": [
         {
           "title": "Swim School - Pre School 3-5yrs (Adult not req in water)",
