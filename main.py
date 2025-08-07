@@ -3,8 +3,9 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+import urllib.parse
 
-# Load environment variables from .env (for local dev)
+# Load environment variables from .env (for local testing)
 load_dotenv()
 
 def send_telegram_alert(bot_token, chat_id, message):
@@ -52,7 +53,8 @@ def parse_cards(html):
 def check_site(site, bot_token, chat_id):
     print(f"\n🔍 Checking: {site['name']}")
     try:
-        r = requests.get(site["url"], timeout=15)
+        decoded_url = urllib.parse.unquote(site["url"])
+        r = requests.get(decoded_url, timeout=15)
         r.raise_for_status()
     except Exception as e:
         print(f"❌ Failed to load {site['url']}: {e}")
@@ -75,7 +77,7 @@ def check_site(site, bot_token, chat_id):
                 f"{found['title']}\n"
                 f"{found['time']}\n"
                 f"Spaces: {found['spaces']}\n"
-                f"{site['url']}"
+                f"{urllib.parse.unquote(site['url'])}"
             )
             send_telegram_alert(bot_token, chat_id, msg)
         else:
